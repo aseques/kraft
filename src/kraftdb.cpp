@@ -417,7 +417,7 @@ int KraftDB::processSqlCommands( const SqlCommandList& commands )
             } else {
                 QSqlError err = q.lastError();
                 res = false;
-                // qDebug () << "###### Failed SQL Command " << cmd.command() << ": " << err.text() << endl;
+                qDebug () << "###### Failed SQL Command " << cmd.command() << ": " << err.text() << endl;
             }
             q.clear();
             emit processedSqlCommand( res );
